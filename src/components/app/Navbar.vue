@@ -15,9 +15,9 @@ const menus = [
       {
         name: 'Event List',
         path: '/browse/events',
-        children: [{ name: 'Event Detail (Sample)', path: '/browse/events/1' }],
       },
       { name: 'Category', path: '/browse/category' },
+      { name: 'Your Events', path: '/browse/your-events' },
     ],
   },
   { name: 'Contact', path: '/contact' },
@@ -199,6 +199,7 @@ onUnmounted(() => {
   margin: 0 auto;
   padding: 0.85rem 2rem;
 }
+
 .navbar.scrolled {
   background: rgba(28, 25, 72, 0.9);
   backdrop-filter: blur(12px);
@@ -271,6 +272,7 @@ onUnmounted(() => {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(102, 68, 255, 0.5);
 }
+
 .nav-link:not(.active):hover {
   background-color: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
@@ -283,14 +285,17 @@ onUnmounted(() => {
   transform: rotate(180deg);
 }
 
-/* DROPDOWN & SUBMENU */
+/* ===================================
+   DROPDOWN & SUBMENU STYLES
+   Inspired by user reference image
+   =================================== */
 .dropdown-menu {
   display: none; /* diubah jadi block saat hover */
   position: absolute;
   top: 100%;
   left: 0;
 
-  background-color: #d8d8d8;
+  background-color: #d8d8d8; /* warna abu seperti referensi */
   min-width: 200px;
   list-style: none;
   padding: 0;
@@ -308,13 +313,14 @@ onUnmounted(() => {
 .dropdown-item {
   position: relative; /* relative untuk submenu absolut */
 }
+
 .dropdown-link {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 20px;
   text-decoration: none;
-  color: #333;
+  color: #333; /* text gelap */
   font-size: 0.95rem;
   transition:
     background-color 0.2s,
@@ -323,7 +329,7 @@ onUnmounted(() => {
 }
 
 .dropdown-link:hover {
-  background-color: #c4c4c4;
+  background-color: #c4c4c4; /* efek hover lebih gelap sedikit */
   color: #000;
 }
 
@@ -364,7 +370,9 @@ onUnmounted(() => {
   }
 }
 
-/* RIGHT SECTION */
+/* ===================================
+   RIGHT SECTION
+   =================================== */
 .nav-right {
   display: flex;
   align-items: center;
